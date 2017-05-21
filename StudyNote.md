@@ -57,8 +57,60 @@ Data Types
  17. Quiz: Practice with Objects
  18. A Note about JSON
  19. JSON
+ http://json.org/
+ - json error check
+ https://jsonlint.com/
+ 
+ 
  20. Validating JSON
  21. Quiz: Validating JSON Quiz
  22. Quiz: All the Resume Sections
+
+
+
+Lesson 4:
+Problem Set 1
+ 1. What is the DOM?
+ - Element
+ https://developer.mozilla.org/en-US/docs/Web/API/Element
+ 
+ 2. Quiz: Black out the Resume
+ - CSS properties 
+ https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Properties_Reference
+ 
+ -style API
+ https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/style
+ 
+ 3. Quiz: Protecting the Resume
+-.replace()
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/replace
+-  character entity references (&lt; and &gt;)
+https://en.wikipedia.org/wiki/List_of_XML_and_HTML_character_entity_references#Character_entity_references_in_HTML
+- Regular Expressions
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions
+-encodeURIComponent()
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/encodeURIComponent
+
+
+4. Quiz: Dot Notation vs Bracket Notation
+
+Lesson 5:
+Flow Control
+ 1. Quiz: If Statements
+ 2. While Loops
+ 3. Quiz: For Loops
+ 4. Quiz: For-In Loops
+ 5. Quiz: Work!
+ 6. A Note About For-In Loops
+ 7. Quiz: Functions
+ 8. Click Metrics
+ 9. Quiz: Collecting Click Locations
+ 10. Quiz: Return Statements
+ 11. Quiz: Internationalize Names
+ 12. Encapsulation
+ 13. Quiz: Encapsulating Functions
+ 14. Quiz: Independent Research
+ 15. Customize the Portfolio
+ 16. The Final Project!
 
 
