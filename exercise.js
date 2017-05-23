@@ -139,9 +139,45 @@ for (var i=0; i<9; i++){
 }
 
 
+//Lesson5 Flow Control For-in Loops
+
+var work = {
+    jobs: [
+        {
+            "name": "디지털헤럴드",
+            "city": "Seoul",
+            "employer": "Samsung"
+        },
+        {
+            "name": "튼튼영어",
+            "city": "gimpo",
+            "employer": "Hyundai"
+        }
+    ]
+};
+
+for (job in work){
+    $("#workExperience").append(HTMLworkStart);
+    
+    var formattedEmployer = HTMLworkEmployer.replace("%data%", work.jobs[job].employer);
+    
+    var formattedTitle = HTMLworkTitle.replace("%data%", work.jobs[job].title);
+    
+    var formattedEmployerTitle = formattedEmployer + formattedTitle;
+    
+    $(".work-entry:last").append(formattedEmployerTitle);
+    // last reference W3school https://www.w3schools.com/jquery/sel_last.asp
+}
 
 
-
+//Lesson5 Flow Control
+//collecting Click Lacations with jQuery
+$(document).click(function(loc) {
+    var x = loc.pageX;
+    var y = loc.pageY;
+    
+    logClicks(x,y);
+});
 
 
 

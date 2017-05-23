@@ -101,8 +101,20 @@ Flow Control
  3. Quiz: For Loops
  4. Quiz: For-In Loops
  5. Quiz: Work!
+
+ 
  6. A Note About For-In Loops
  7. Quiz: Functions
+-Two way to make Function
+1
+var myFunc = function(parm1, param2){
+    //code goes here
+}
+2
+function(parm1, param2){
+    //code goes here
+}
+
  8. Click Metrics
  9. Quiz: Collecting Click Locations
  10. Quiz: Return Statements
