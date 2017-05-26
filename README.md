@@ -2,11 +2,11 @@
 BoostCamp > UdaCity
 
 REPOSITORY
-portfolio repository is history of class( udacity )
+portfolio repository - is history of class( udacity )
 
-project repository is idea from the portfolio class
+project repository - is idea from the portfolio class
 
-CONCEPT
+ORGANIZE CONCEPTS
 I use WorkFlowy !!
 
 // javascript
