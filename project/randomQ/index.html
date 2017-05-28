@@ -8,7 +8,7 @@
 	<title>randomQ</title>
 
 	<!-- Load the page styles. -->
-	<link href="css/style.css" rel="stylesheet">
+<!--	<link href="css/style.css" rel="stylesheet">-->
 
 	<!--
 	Uncomment the <script> tag below when you're ready to add an interactive Google Map to your resume!
@@ -18,28 +18,94 @@
 	<meta name="viewport" content="width=device-width,initial-scale=1">
 </head>
 	<body>
-		<div class="question"> question </div>
-		<div class="correctAnswer">correcAnswer</div>
-		<div class="wrongAnswer">correcAnswer</div>
-		
-		<button>문제풀기</button>
+		<div id="question">question</div>
+		<form action="">
+            <div id="correctAnswer"></div>
+            <div id="wrongAnswer"></div>
+		    <button>문제풀기</button>
+		</form>
 		<script src="js/jQuery.js"></script>
-		<script>
+		
+        <script>
 			//components.js
-			var HTMLquestion = '<div class="question"></div>';
-		</script>	
-		<script>
-			//randomQ.js
-			var questionAndAnswer = {
-			"question": "튼튼영어의 학습목표는 무엇인가요?",
-			"correctAnswer": "연상력",
-			"wrongAnswer": "시험"
-			};
+			var HTMLquestion = '<div class="">%data%</div>';
+            
+            var HTMLanswer = '<div class=""><input type="radio" name="color" value="red">:%data%</div>';
 
-			if (questionAndAnswer.question.length > 0){
-				
-			}
-		</script>
+			//randomQ.js            
+//			var questionAndAnswers = {
+//                "questionTuntunConcept": [
+//                    {    
+//                        "question": "튼튼영어의 학습 목표는 무엇인가요?",
+//                        "correctAnswer": "연상력",
+//                        "wrongAnswer": "시험"
+//                    },
+//                                        {    
+//                        "question": "튼튼영어의 학습 목표는 무엇인가요?",
+//                        "correctAnswer": "연상력",
+//                        "wrongAnswer": "시험"
+//                    }
+//                ]			
+//            };  
+//            
+//            
+var work = {
+    "jobs": [
+        {
+            "question": "튼튼영어의 학습 목표는 무엇인가요?",
+            "correctAnswer": "연상력",
+            "wrongAnswer": "시험"
+        },
+        {
+            "question": "튼튼영어 수업은 최대 몇분인가요?",
+            "correctAnswer": "40",
+            "wrongAnswer": "1시간"
+        }
+    ]
+};
+
+            
+// 랜덤함수 만들기 범위있는 난수             
+function rand(start, end)
+
+{
+    return Math.floor((Math.random() * (end-start+1)) + start);
+}          
+            
+            
+function displayWork() {
+
+// bio객체에 skills가 있는지 확인하고 있다면 ID가 header인 div에 
+    for (job in work.jobs) {
+        // create new div for wrok experience
+
+        var formattedQuestion = HTMLquestion.replace("%data%", work.jobs[rand(0, 1)].question);
+
+        var formattedCorrectAnswer = HTMLanswer.replace("%data%", work.jobs[rand(0, 1)].correctAnswer);
+
+        var formattedWrongAnswer = HTMLanswer.replace("%data%", work.jobs[rand(0, 1)].wrongAnswer);
+
+//        var formattedDescription = HTMLworkDescription.replace("%data", work.jobs[job].description);
+
+        var formattedQuestionAndAnswer = formattedQuestion + formattedCorrectAnswer + formattedWrongAnswer;
+
+        $("#question").append(formattedQuestionAndAnswer);
+        // last reference W3school https://www.w3schools.com/jquery/sel_last.asp
+        }
+    }
+displayWork();
+            
+//            for (questionAndAnswer in questionAndAnswers.questionTuntunConcept) {
+//                var formattedQuestion = HTMLquestion.replace("%data%", questionAndAnswer.questionTuntunConcept[questionAndAnswer].question); 
+//                $('#question').append(formattedQuestion);
+//
+//                var formattedCorrectAnswer = HTMLanswer.replace("%data%", questionAndAnswer.questionTuntunConcept[questionAndAnswer].correctAnswer); 
+//                $('#correctAnswer').append(formattedCorrectAnswer);
+//
+//                var formattedWrongAnswer = HTMLanswer.replace("%data%", questionAndAnswer.questionTuntunConcept[questionAndAnswer].wrongAnswer); 
+//                $('#wrongAnswer').append(formattedWrongAnswer);		
+//            }
+        </script>
 	</body>
 </html>
 
