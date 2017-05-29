@@ -7,30 +7,66 @@
 	<!-- Tells the browser what the title of this page should be. -->
 	<title>randomQ</title>
 
-	<!-- Load the page styles. -->
-<!--	<link href="css/style.css" rel="stylesheet">-->
+    <!-- 부트스트랩 -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
 
+    <!-- 부가적인 테마 -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
+
+    <!-- 합쳐지고 최소화된 최신 자바스크립트 -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+
+
+	<!-- Load the page styles. -->
+    <!--    <link href="css/style.css" rel="stylesheet">-->
+    <style>
+    /*  css/style.css*/
+        #container 
+        {
+          width: 70%;
+          height: 70%;
+          margin: 40px auto;
+          background: orange;
+        }
+        
+        #main 
+        {
+          position: relative;
+          display: inline-block;
+
+          width: 50%;
+          padding: 1em;
+/*          background: orange;*/
+          color: white;
+        }
+        #question, #correctAnser, #wrongAnswer{
+            font-size: 1.5em;
+        } 
+    </style>
 	<!--
 	Uncomment the <script> tag below when you're ready to add an interactive Google Map to your resume!
 	-->
 	<!-- <script src="http://maps.googleapis.com/maps/api/js?libraries=places"></script> -->
 
 	<meta name="viewport" content="width=device-width,initial-scale=1">
+	
 </head>
 	<body>
-		<div id="question">question</div>
-		<form action="">
-            <div id="correctAnswer"></div>
-            <div id="wrongAnswer"></div>
-		    <button>문제풀기</button>
-		</form>
-		<script src="js/jQuery.js"></script>
-		
+	<div id="container">
+        <div id="center">
+            <div id="question"></div>
+                <div id="correctAnswer"></div>
+                <div id="wrongAnswer"></div>
+                <button>답제출</button>
+                <div id="counter">1/3</div>
+            <script src="js/jQuery.js"></script>
+        </div>
+    </div>   
         <script>
 			//components.js
 			var HTMLquestion = '<div class="">%data%</div>';
             
-            var HTMLanswer = '<div class=""><input type="radio" name="color" value="red">:%data%</div>';
+            var HTMLanswer = '<div class=""><input type="radio" name="color" value="red"> : %data%</div>';
 
 			//randomQ.js            
 //			var questionAndAnswers = {
@@ -60,6 +96,11 @@ var work = {
             "question": "튼튼영어 수업은 최대 몇분인가요?",
             "correctAnswer": "40",
             "wrongAnswer": "1시간"
+        },
+        {
+            "question": "신입교육 과제 제출시한은 언제까지인가요?",
+            "correctAnswer": "교육 후 3개월",
+            "wrongAnswer": "교육 후 1년"
         }
     ]
 };
@@ -67,33 +108,37 @@ var work = {
             
 // 랜덤함수 만들기 범위있는 난수             
 function rand(start, end)
-
 {
     return Math.floor((Math.random() * (end-start+1)) + start);
 }          
             
-            
-function displayWork() {
+//            
+//function displayWork() {
+//for (var i=0; i<9; i++){
+//    console.log(i);
+//}
+//// bio객체에 skills가 있는지 확인하고 있다면 ID가 header인 div에 
+//    for (job in work.jobs) {
+//        // create new div for wrok experience
+        var length = work.jobs.length;    
+//        
+        var randNum = rand(0, length-1);
 
-// bio객체에 skills가 있는지 확인하고 있다면 ID가 header인 div에 
-    for (job in work.jobs) {
-        // create new div for wrok experience
+        var formattedQuestion = HTMLquestion.replace("%data%", work.jobs[randNum].question);
 
-        var formattedQuestion = HTMLquestion.replace("%data%", work.jobs[rand(0, 1)].question);
+        var formattedCorrectAnswer = HTMLanswer.replace("%data%", work.jobs[randNum].correctAnswer);
 
-        var formattedCorrectAnswer = HTMLanswer.replace("%data%", work.jobs[rand(0, 1)].correctAnswer);
+        var formattedWrongAnswer = HTMLanswer.replace("%data%", work.jobs[randNum].wrongAnswer);
 
-        var formattedWrongAnswer = HTMLanswer.replace("%data%", work.jobs[rand(0, 1)].wrongAnswer);
-
-//        var formattedDescription = HTMLworkDescription.replace("%data", work.jobs[job].description);
+//       var formattedDescription = HTMLworkDescription.replace("%data", work.jobs[job].description);
 
         var formattedQuestionAndAnswer = formattedQuestion + formattedCorrectAnswer + formattedWrongAnswer;
 
         $("#question").append(formattedQuestionAndAnswer);
         // last reference W3school https://www.w3schools.com/jquery/sel_last.asp
-        }
-    }
-displayWork();
+//        }
+//    }
+//displayWork();
             
 //            for (questionAndAnswer in questionAndAnswers.questionTuntunConcept) {
 //                var formattedQuestion = HTMLquestion.replace("%data%", questionAndAnswer.questionTuntunConcept[questionAndAnswer].question); 
