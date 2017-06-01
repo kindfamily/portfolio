@@ -1,6 +1,17 @@
 Study Note
+//html css
+https://classroom.udacity.com/courses/ud304
+
 //javascript
 https://classroom.udacity.com/courses/ud804
+
+//jQuery
+https://classroom.udacity.com/courses/ud245
+
+//ajax
+https://classroom.udacity.com/courses/ud110
+
+
 
 Lesson 1:
 Getting Up and Running
@@ -124,5 +135,65 @@ function(parm1, param2){
  14. Quiz: Independent Research
  15. Customize the Portfolio
  16. The Final Project!
+ 
+ 
+ 
+ //jQuery
+ 
+ 
+Lesson 2:
+The Tricks: DOM Manipulation
+ 1. jQuery Documentation and You
+ 2. Quiz: you.toggleClass() Quiz
+ 3. Quiz: Toggling Classes Quiz
+ 4. Quiz: Changing Attributes Quiz
+ 5. Quiz: Modifying CSS Quiz
+ 6. Pulling HTML and Text
+ 7. Quiz: Collecting Values Quiz
+ 8. Quiz: Removing DOM Elements
+ 9. Adding DOM Elements
+ 10. Appending Child Elements
+ 11. Quiz: Build a DOM (Family) Tree!
+ 12. Quiz: Iterating with Each Quiz
+ 13. Quiz: Why use jQuery? Quiz
+ 14. Outro
+ 15. Quiz: $(function)
+ 
+ 
+Lesson 3:
+Event Listeners with jQuery
+ 1. Intro to Event Listening with jQuery
+ 2. What are Browser Events?
+ 3. Quiz: monitorEvents Quiz
+ 4. Anatomy of a jQuery Event Listener
+ 5. Quiz: jQuery Event Listener Order Quiz
+ 6. Quiz: jQuery Event Listener
+ 7. The Event Object
+ 8. The Convenience Method
+ 9. Quiz: Convenience Methods Quiz
+ 10. jQuery's multifunctional .on method
+ 11. Event Delegation
+ 12. Outro
+Intro to Event Listening with jQuery
+
+
+//ajax
+
+Lesson 1:
+Requests and APIs
+ 1. Pre-Introduction
+ 2. Intro
+ 3. Client Server Demonstration
+ 4. AJAX Definition
+ 5. Quiz: Asynchronous vs Synchronous Requests
+ 6. Facebook Example 1
+ 7. Facebook Example 2
+ 8. Facebook's AJAX Request
+ 9. Quiz: Twitter Quiz
+ 10. Quiz: Necessary components of an AJAX request
+ 11. API Inspiration
+ 12. Quiz: Finding Examples of API Use
+ 13. Quiz: API Brainstorm
+ 14. Quiz: Download the Project
 
 
